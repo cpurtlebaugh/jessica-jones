@@ -8,6 +8,7 @@ $bg-red: #c2002f;
 $white: white;
 $black: black;
 $font-family-myriad: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-open-sans: "Open Sans", Sans-serif;
 
 // .browsehappy {
 //   margin: 0.2em 0;
@@ -16,8 +17,7 @@ $font-family-myriad: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "
 //   padding: 0.2em 0;
 // }
 
-
-/* Body and container styles */
+/* Body and global styles */
 html {
   width: 100%;
   height: 100%;
@@ -26,54 +26,105 @@ html {
 
 body {
   margin: 0;
-  // height: 100%;
   max-width: 100%;
   background-color: $black;
   font-family: $font-family-myriad;
   line-height: 2;
 }
 
-  // margin: 0;
-  // margin-bottom: 12vh;
-  // margin-top: 116px;
+h3 {
+  padding-bottom: 2%;
+  font-size: 20px;
+}
 
-// .main-container {
-//   height: 100%;
-//   width: 100%;
+h2 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* need to position text over jpg's, see below */
+// img {
+//   position: relative;
 // }
 
-///////
 
-/* Custom page header and footer */
+/* Custom page navbar and footer */
 
-// header
-.header {
-  margin: 0px;
+nav {
   background-color: $bg-red;
   color: $white;
-
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+  font-family: $font-family-open-sans;
+  a {
+  color: $white;
+    h4 {
+      margin-top: 30%;
+      font-size: 20px;
+    }
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  img {
+      margin-top: 18%;
+      width: 45%;
+      height: 45%;
   }
 }
 
-// footer
 
-///////
+footer {
+  background-color: $bg-red;
+  color: $white;
+  font-size: 16px;
+  font-family: $font-family-open-sans;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  h2 {
+    margin: 0;
+  }
+}
 
-/* Jpeg containers */
+
+/* Jpeg / text containers */
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
 .responsive-image{
   width: 100%;
   background-size: 100% 100%;
 }
 
+/* Jessica section */
+.jessica-section {
+  position: relative;
+}
+
+.jessica-text {
+  position: absolute;
+  width:100%;
+  font-family: $font-family-open-sans;
+  color: $white;
+  top:0;
+  padding-top: 35%;
+  padding-bottom: 12%;
+  p {
+    padding-left: 12%;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 26px;
+    letter-spacing: 5px;
+    padding-left: 13%;
+  }
+}
+
+/* Goal Section */
 .goal-section {
   background-color: $white;
   font-family: $font-family-myriad;
@@ -82,22 +133,34 @@ body {
   padding-bottom: 6%;
 }
 
+
+/* Campaign Section */
 .campaign-section {
   font-family: $font-family-myriad;
   font-size: 20px;
+  color: $white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background: url('../images/jessica-polaroid.jpg');
+}
+
+.campaign-text {
+  width:100%;
+  top:0;
+  background-color:#694679;
+  opacity: 0.7;
+  padding-top: 12%;
+  padding-bottom: 12%;
 }
 
 
+/* Social media / section */
+video {
+   width:100%;
+   height:auto;
+}
 
-
-///////
-
-/* Text-overlay on jpeg container */
-
-///////
-
-/* Social media columns */
-.video-section {
+.social, .video-section {
   img {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -105,60 +168,126 @@ body {
     height: auto;
   }
 }
-// video left column
 
-// image right column
 
-// social media left column
-.social {
-  img {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    max-width: 100%;
-    height: auto;
+
+
+
+
+
+// @media only screen and (min-width:960px){
+//     /* styles for browsers larger than 960px; */
+// }
+
+// @media only screen and (min-width:1440px){
+//     /* styles for browsers larger than 1440px; */
+
+// }
+// @media only screen and (min-width:2000px){
+//     /* for sumo sized (mac) screens */
+// }
+@media only screen and (max-width:$screen-xs){
+   /* styles for mobile browsers smaller than 480px; (iPhone) */
+  body {
+    line-height: 1.5;
   }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  nav {
+    img {
+      margin-top: 18%;
+      width: 38%;
+      height: 38%;
+    }
+    a {
+      h4 {
+        margin-top: 38%;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .jessica-text {
+  p {
+      padding-left: 3%;
+      font-size: 10px;
+    }
+  h1 {
+      font-size: 14px;
+      letter-spacing: 4px;
+      padding-left: 4%;
+    }
+  }
+
+
+
+  .goal-section, .campaign-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }
-// social media right column
 
-///////
+// @media only screen and (max-width:$screen-sm){
+//   h2 {
+//     font-size: 20px;
+//   }
+//   h3 {
+//     font-size: 18px;
+//   }
+//   p {
+//     font-size: 14px;
+//   }
+
+//   nav {
+//     img {
+//       margin-top: 18%;
+//       width: 38%;
+//       height: 38%;
+//     }
+//     a {
+//       h4 {
+//         margin-top: 30%;
+//         font-size: 16px;
+//       }
+//     }
+//   }
+// }
 
 
+// @media only screen and (min-width:$screen-md){
 
 
-// need to position text over jpg's, see below
-img {
-  position: relative;
-}
+//   nav {
+//     img {
+//       margin-top: 18%;
+//       width: 38%;
+//       height: 38%;
+//     }
+//     a {
+//       h4 {
+//         margin-top: 30%;
+//         font-size: 16px;
+//       }
+//     }
+//   }
+// }
+/* different techniques for iPad screening */
+// @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+//   /* For portrait layouts only */
+// }
 
-h2 {
-   position: absolute;
-   top: 200px;
-   left: 0;
-   width: 100%;
-}
-
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  // .container {
-  //   max-width: 730px;
-  // }
-
-  // /* Remove the padding we set earlier */
-  // .header,
-  // .marketing,
-  // .footer {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
-
-  // Space out the masthead
-  // .header {
-  //   margin-bottom: 30px;
-  // }
-
-  // /* Remove the bottom border on the jumbotron for visual effect */
-  // .jumbotron {
-  //   border-bottom: 0;
-  // }
-}
+// @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+//   /* For landscape layouts only */
+// }
