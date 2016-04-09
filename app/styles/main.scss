@@ -57,10 +57,14 @@ nav {
   background-color: $bg-red;
   color: $white;
   font-family: $font-family-open-sans;
+  ul{
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
   a {
-  color: $white;
+    color: $white;
     h4 {
-      margin-top: 30%;
+      margin-top: 7%;
       font-size: 20px;
     }
     &:hover {
@@ -69,9 +73,10 @@ nav {
     }
   }
   img {
-      margin-top: 18%;
-      width: 45%;
-      height: 45%;
+      margin-top: 5%;
+      margin-bottom: 2%;
+      width: 12%;
+      height: 12%;
   }
 }
 
@@ -186,7 +191,7 @@ video {
 // @media only screen and (min-width:2000px){
 //     /* for sumo sized (mac) screens */
 // }
-@media only screen and (max-width:$screen-xs){
+@media only screen and (max-width:$screen-sm){
    /* styles for mobile browsers smaller than 480px; (iPhone) */
   body {
     line-height: 1.5;
@@ -206,7 +211,7 @@ video {
 
   nav {
     img {
-      margin-top: 18%;
+      margin-top: 21%;
       width: 38%;
       height: 38%;
     }
@@ -218,7 +223,7 @@ video {
     }
   }
 
-  .jessica-text {
+.jessica-text {
   p {
       padding-left: 3%;
       font-size: 10px;
@@ -228,8 +233,19 @@ video {
       letter-spacing: 4px;
       padding-left: 4%;
     }
-  }
+}
 
+.social, .video-section {
+  video {
+    max-width: 70%;
+  }
+  img {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    max-width: 70%;
+    height: auto;
+  }
+}
 
 
   .goal-section, .campaign-section {
@@ -261,6 +277,18 @@ video {
 //         margin-top: 30%;
 //         font-size: 16px;
 //       }
+//     }
+//   }
+
+//   .social, .video-section {
+//   video {
+//     max-width: 50%;
+//   }
+//   img {
+//     padding-top: 2%;
+//     padding-bottom: 2%;
+//     max-width: 50%;
+//     height: auto;
 //     }
 //   }
 // }
