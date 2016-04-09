@@ -30,6 +30,7 @@ body {
   max-width: 100%;
   background-color: $black;
   font-family: $font-family-myriad;
+  line-height: 2;
 }
 
   // margin: 0;
@@ -75,8 +76,18 @@ body {
 
 .goal-section {
   background-color: $white;
-  height: 25%;
+  font-family: $font-family-myriad;
+  font-size: 20px;
+  padding-top: 6%;
+  padding-bottom: 6%;
 }
+
+.campaign-section {
+  font-family: $font-family-myriad;
+  font-size: 20px;
+}
+
+
 
 
 ///////
@@ -99,6 +110,8 @@ body {
 // social media left column
 .social {
   img {
+    padding-top: 2%;
+    padding-bottom: 2%;
     max-width: 100%;
     height: auto;
   }
@@ -106,7 +119,6 @@ body {
 // social media right column
 
 ///////
-
 
 
 
