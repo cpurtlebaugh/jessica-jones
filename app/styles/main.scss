@@ -58,8 +58,9 @@ nav {
   color: $white;
   font-family: $font-family-open-sans;
   ul{
-    padding-left: 4% !important;
-    padding-right: 4% !important;
+    padding-left: 11% !important;
+    padding-right: 11% !important;
+    padding-bottom: 0;
   }
   a {
     color: $white;
@@ -165,6 +166,11 @@ video {
    height:auto;
 }
 
+// gives space between footer and social section
+.social {
+  margin-bottom: 10%;
+}
+
 .social, .video-section {
   img {
     padding-top: 2%;
@@ -174,21 +180,10 @@ video {
   }
 }
 
-// @media only screen and (min-width:960px){
-//     /* styles for browsers larger than 960px; */
-// }
-
-// @media only screen and (min-width:1440px){
-//     /* styles for browsers larger than 1440px; */
-
-// }
-// @media only screen and (min-width:2000px){
-//     /* for sumo sized (mac) screens */
-// }
-@media only screen and (max-width:$screen-xs){
+@media only screen and (max-width:$screen-sm){
    /* styles for mobile browsers smaller than 480px; (iPhone) */
   body {
-    line-height: 1.5;
+    line-height: 2;
   }
 
   h2 {
@@ -200,22 +195,28 @@ video {
   }
 
   p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
-  nav {
-    img {
-      margin-top: 21%;
-      width: 38%;
-      height: 38%;
-    }
-    a {
-      h4 {
-        margin-top: 38%;
-        font-size: 12px;
-      }
+nav {
+  ul{
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+    padding-bottom: 0;
+  }
+  img {
+    margin-top: 20%;
+    width: 25%;
+    height: 25%;
+  }
+  a {
+    h4 {
+      margin-top: 26%;
+      margin-bottom: 20%;
+      font-size: 14px;
     }
   }
+}
 
 .jessica-text {
   p {
@@ -229,6 +230,7 @@ video {
     }
 }
 
+// video / img styling in social section
 .social, .video-section {
   video {
     max-width: 70%;
@@ -242,48 +244,10 @@ video {
 }
 
 
-  .goal-section, .campaign-section {
+.goal-section, .campaign-section {
     padding-left: 0;
     padding-right: 0;
   }
 
 }
-
-// @media only screen and (max-width:$screen-sm){
-//   h2 {
-//     font-size: 20px;
-//   }
-//   h3 {
-//     font-size: 18px;
-//   }
-//   p {
-//     font-size: 14px;
-//   }
-
-//   nav {
-//     img {
-//       margin-top: 18%;
-//       width: 38%;
-//       height: 38%;
-//     }
-//     a {
-//       h4 {
-//         margin-top: 30%;
-//         font-size: 16px;
-//       }
-//     }
-//   }
-
-//   .social, .video-section {
-//   video {
-//     max-width: 50%;
-//   }
-//   img {
-//     padding-top: 2%;
-//     padding-bottom: 2%;
-//     max-width: 50%;
-//     height: auto;
-//     }
-//   }
-// }
 
