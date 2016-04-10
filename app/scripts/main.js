@@ -1,1 +1,1 @@
-console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
+console.log('ignition rocks :p'); // eslint-disable-line no-console
